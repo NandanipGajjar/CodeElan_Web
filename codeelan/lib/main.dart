@@ -33,10 +33,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      // initialRoute: '/',
-      // onGenerateRoute: (settings) => RouterGenerate.generateRoute(settings),
-      home: IPSoolutionsUI(),
-      // home: HomePage(),
+      initialRoute: '/',
+      onGenerateRoute: (settings) => RouterGenerate.generateRoute(settings),
+      // home: IPSoolutionsUI(),
+      home: HomePage(),
     );
   }
 }
