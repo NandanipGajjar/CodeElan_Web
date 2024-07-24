@@ -1364,17 +1364,6 @@ class _CompaniesSliderWidgetState extends State<CompaniesSliderWidget> {
     return Container(color: Colors.white, child: companiesSlider(context));
   }
 
-  // List<Widget> carouselItems = [
-  //   Image.asset('assets/ACMEMinds-logo.png'),
-  //   Image.asset('assets/Idea-bridge-Logo.png'),
-  //   Image.asset('assets/LoadShare-Logo.png'),
-  //   Image.asset('assets/ParentPayGroup.png'),
-  //   Image.asset('assets/PlusInnovation-Logo.png'),
-  //   Image.asset('assets/SunPower-Logo.png'),
-  //   Image.asset('assets/Unique-Solutions.png'),
-  //   Image.asset('assets/VoniGo-Logo.png'),
-  // ];
-
   List<String> carouselImages = [
     'assets/ACMEMinds-logo.png',
     'assets/Idea-bridge-Logo.png',
@@ -1386,38 +1375,12 @@ class _CompaniesSliderWidgetState extends State<CompaniesSliderWidget> {
   int _current = 1;
 
   Widget companiesSlider(BuildContext context) {
-    // return CarouselSlider(
-    //   carouselController: controller,
-    //   items: carouselItems ?? List.empty(),
-    //   options: CarouselOptions(
-    //     height: Responsive.isDesktop(context) || Responsive.isk4Desktop(context)
-    //         ? 200.0
-    //         : 200,
-    //     enlargeCenterPage: true,
-    //     autoPlay: true,
-    //     aspectRatio: 16 / 9,
-    //     autoPlayCurve: Curves.fastOutSlowIn,
-    //     // enableInfiniteScroll: true,
-    //     autoPlayAnimationDuration: Duration(milliseconds: 800),
-    //     viewportFraction:
-    //         Responsive.isDesktop(context) || Responsive.isk4Desktop(context)
-    //             ? 0.2
-    //             : 0.5,
-    //     initialPage: 0,
-    //     scrollDirection: Axis.horizontal,
-    //     pauseAutoPlayInFiniteScroll: false,
-    //     onPageChanged: (index, reason) {
-    //       _current = index;
-    //     },
-    //   ),
-    // );
-
-    return CarouselSlider.builder(
+     return CarouselSlider.builder(
       itemCount: carouselImages.length,
       options: CarouselOptions(
           height: 200,
           aspectRatio: 16 / 9,
-          viewportFraction: 0.2,
+          viewportFraction: Responsive.isDesktop(context) || Responsive.isk4Desktop(context)?0.2:0.5,
           autoPlay: true,
           autoPlayInterval: const Duration(seconds: 5),
           enableInfiniteScroll: true,

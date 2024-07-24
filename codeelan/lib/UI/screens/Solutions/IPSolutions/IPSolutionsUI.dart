@@ -213,7 +213,10 @@ class _IPSoolutionsUIState extends State<IPSoolutionsUI> {
         children: [
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
             SizedBox(
-                width: width * .2,
+                width: Responsive.isDesktop(context) ||
+                        Responsive.isk4Desktop(context)
+                    ? width * .2
+                    : 30,
                 child: Divider(
                   thickness: 2,
                   color: AppColor.grey,
@@ -235,7 +238,10 @@ class _IPSoolutionsUIState extends State<IPSoolutionsUI> {
               width: 10,
             ),
             SizedBox(
-                width: width * .2,
+                width: Responsive.isDesktop(context) ||
+                        Responsive.isk4Desktop(context)
+                    ? width * .2
+                    : 30,
                 child: Divider(
                   thickness: 2,
                   color: AppColor.grey,
@@ -245,7 +251,7 @@ class _IPSoolutionsUIState extends State<IPSoolutionsUI> {
               width: Responsive.isDesktop(context) ||
                       Responsive.isk4Desktop(context)
                   ? width * .7
-                  : width,
+                  : width - 50,
               child: Text(
                 'We don’t believe in fitting a technology to fix a problem, we believe in finding a digital solution for you, whatever technology it takes. It is not just about incorporating new technology into a business; it’s a seismic change, disrupting almost everything that forms enterprises. Existing products are reinvented, manual processes are swapped for automated models, and decision-making turns more precise with data. Digital Transformation, therefore, is far more than just a technology switch. It’s about training people and changing processes to get more out of the most powerful tool in business.',
                 style: TextStyle(
@@ -263,278 +269,557 @@ class _IPSoolutionsUIState extends State<IPSoolutionsUI> {
                 Responsive.isDesktop(context) || Responsive.isk4Desktop(context)
                     ? width * .8
                     : width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: 350,
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        'IPSolution_WeRecruit.jpg',
+            child:
+                Responsive.isDesktop(context) || Responsive.isk4Desktop(context)
+                    ? Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 350,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  'IPSolution_WeRecruit.jpg',
+                                ),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text('WeRecruit',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColor.primary,
+                                    )),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text(
+                                    'Attract, hire, and onboard the right people with Pinpoint—the modern applicant tracking system designed for internal talent acquisition teams.',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: AppColor.subHeadingColor,
+                                    ))
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 350,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  'IPSolution_Magic-Inbox.jpg',
+                                ),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text('Magic Inbox',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColor.primary,
+                                    )),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text(
+                                    'Attract, hire, and onboard the right people with Pinpoint—the modern applicant tracking system designed for internal talent acquisition teams.',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: AppColor.subHeadingColor,
+                                    ))
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 350,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  'IPSolution_WeModdle.jpg',
+                                ),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text('We Moddel(LMS)',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColor.primary,
+                                    )),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text(
+                                    'Attract, hire, and onboard the right people with Pinpoint—the modern applicant tracking system designed for internal talent acquisition teams.',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: AppColor.subHeadingColor,
+                                    ))
+                              ],
+                            ),
+                          ),
+                        ],
+                      )
+                    : Column(
+                        children: [
+                          Container(
+                            width: 350,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  'IPSolution_Magic-Inbox.jpg',
+                                ),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text('CodeElan',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColor.primary,
+                                    )),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text(
+                                    'Attract, hire, and onboard the right people with Pinpoint—the modern applicant tracking system designed for internal talent acquisition teams.',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: AppColor.subHeadingColor,
+                                    ))
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 350,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  'IPSolution_Magic-Inbox.jpg',
+                                ),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text('Magic Inbox',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColor.primary,
+                                    )),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text(
+                                    'Attract, hire, and onboard the right people with Pinpoint—the modern applicant tracking system designed for internal talent acquisition teams.',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: AppColor.subHeadingColor,
+                                    ))
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 350,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  'IPSolution_WeModdle.jpg',
+                                ),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text('We Moddel(LMS)',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: AppColor.primary,
+                                    )),
+                                SizedBox(
+                                  height: height * .02,
+                                ),
+                                Text(
+                                    'Attract, hire, and onboard the right people with Pinpoint—the modern applicant tracking system designed for internal talent acquisition teams.',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: AppColor.subHeadingColor,
+                                    ))
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        height: height * .02,
-                      ),
-                      Text('WeRecruit',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: AppColor.primary,
-                          )),
-                      SizedBox(
-                        height: height * .02,
-                      ),
-                      Text(
-                          'Attract, hire, and onboard the right people with Pinpoint—the modern applicant tracking system designed for internal talent acquisition teams.',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: AppColor.subHeadingColor,
-                          ))
-                    ],
-                  ),
-                ),
-                Container(
-                  width: 350,
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        'IPSolution_Magic-Inbox.jpg',
-                      ),
-                      SizedBox(
-                        height: height * .02,
-                      ),
-                      Text('Magic Inbox',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: AppColor.primary,
-                          )),
-                      SizedBox(
-                        height: height * .02,
-                      ),
-                      Text(
-                          'Attract, hire, and onboard the right people with Pinpoint—the modern applicant tracking system designed for internal talent acquisition teams.',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: AppColor.subHeadingColor,
-                          ))
-                    ],
-                  ),
-                ),
-                Container(
-                  width: 350,
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        'IPSolution_WeModdle.jpg',
-                      ),
-                      SizedBox(
-                        height: height * .02,
-                      ),
-                      Text('We Moddel(LMS)',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: AppColor.primary,
-                          )),
-                      SizedBox(
-                        height: height * .02,
-                      ),
-                      Text(
-                          'Attract, hire, and onboard the right people with Pinpoint—the modern applicant tracking system designed for internal talent acquisition teams.',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: AppColor.subHeadingColor,
-                          ))
-                    ],
-                  ),
-                ),
-              ],
-            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextButton(
-                onHover: (val) {
-                  if (val) {
-                    setState(() {
-                      _width = 380;
-                      _height = 300;
-                      _color1 = Colors.black;
-                    });
-                  } else {
-                    setState(() {
-                      _color1 = AppColor.primary;
-                    });
-                  }
-                },
-                onPressed: () {},
-                child: AnimatedContainer(
-                  // Use the properties stored in the State class.
-                  width: 380,
-                  height: 280,
-                  decoration: BoxDecoration(
-                    color: _color1,
-                  ),
-                  // Define how long the animation should take.
-                  duration: const Duration(seconds: 1),
-                  // Provide an optional curve to make the animation feel smoother.
-                  curve: Curves.fastOutSlowIn,
+          Responsive.isDesktop(context) || Responsive.isk4Desktop(context)
+              ? Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onHover: (val) {
+                        if (val) {
+                          setState(() {
+                            _width = 380;
+                            _height = 300;
+                            _color1 = Colors.black;
+                          });
+                        } else {
+                          setState(() {
+                            _color1 = AppColor.primary;
+                          });
+                        }
+                      },
+                      onPressed: () {},
+                      child: AnimatedContainer(
+                        // Use the properties stored in the State class.
+                        width: 380,
+                        height: 280,
+                        decoration: BoxDecoration(
+                          color: _color1,
+                        ),
+                        // Define how long the animation should take.
+                        duration: const Duration(seconds: 1),
+                        // Provide an optional curve to make the animation feel smoother.
+                        curve: Curves.fastOutSlowIn,
 
-                  child: Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(
-                          Icons.rocket_launch_outlined,
-                          color: _iconColor,
-                          size: 70,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(
+                                Icons.rocket_launch_outlined,
+                                color: _iconColor,
+                                size: 70,
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                "Move faster, right from the start",
+                                style: TextStyle(
+                                    color: _iconColor,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                "Accelerate your ROI with expert implementation options for organizations of any size",
+                                style:
+                                    TextStyle(color: _iconColor, fontSize: 16),
+                              ),
+                            ],
+                          ),
                         ),
-                        SizedBox(
-                          height: 20,
+                      ),
+                    ),
+                    TextButton(
+                      onHover: (val) {
+                        if (val) {
+                          setState(() {
+                            _width = 380;
+                            _height = 300;
+                            _color2 = Colors.black;
+                          });
+                        } else {
+                          setState(() {
+                            _color2 = AppColor.primary;
+                          });
+                        }
+                      },
+                      onPressed: () {},
+                      child: AnimatedContainer(
+                        // Use the properties stored in the State class.
+                        width: 380,
+                        height: 280,
+                        decoration: BoxDecoration(
+                          color: _color2,
                         ),
-                        Text(
-                          "Move faster, right from the start",
-                          style: TextStyle(
+                        // Define how long the animation should take.
+                        duration: const Duration(seconds: 1),
+                        // Provide an optional curve to make the animation feel smoother.
+                        curve: Curves.fastOutSlowIn,
+
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(
+                                Icons.album_outlined,
+                                color: _iconColor,
+                                size: 70,
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                "Save critical time, remove barriers",
+                                style: TextStyle(
+                                    color: _iconColor,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                "Solve challenges with fleky tests, high failure rates, or Bugs with help of our experts.",
+                                style:
+                                    TextStyle(color: _iconColor, fontSize: 16),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      onHover: (val) {
+                        if (val) {
+                          setState(() {
+                            _width = 380;
+                            _height = 300;
+                            _color3 = Colors.black;
+                          });
+                        } else {
+                          setState(() {
+                            _color3 = AppColor.primary;
+                          });
+                        }
+                      },
+                      onPressed: () {},
+                      child: AnimatedContainer(
+                        // Use the properties stored in the State class.
+                        width: 380,
+                        height: 280,
+                        decoration: BoxDecoration(
+                          color: _color3,
+                        ),
+                        // Define how long the animation should take.
+                        duration: const Duration(seconds: 1),
+                        // Provide an optional curve to make the animation feel smoother.
+                        curve: Curves.fastOutSlowIn,
+
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(
+                                Icons.stacked_line_chart_rounded,
+                                color: _iconColor,
+                                size: 70,
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                "Adopt best practices, accelerate automation",
+                                style: TextStyle(
+                                    color: _iconColor,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                "From framework development to scripts that accelerate automation, we can help.",
+                                style:
+                                    TextStyle(color: _iconColor, fontSize: 16),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+              : Column(children: [
+                  TextButton(
+                    onHover: (val) {
+                      if (val) {
+                        setState(() {
+                          _width = 380;
+                          _height = 300;
+                          _color1 = Colors.black;
+                        });
+                      } else {
+                        setState(() {
+                          _color1 = AppColor.primary;
+                        });
+                      }
+                    },
+                    onPressed: () {},
+                    child: AnimatedContainer(
+                      // Use the properties stored in the State class.
+                      width: 380,
+                      height: 280,
+                      decoration: BoxDecoration(
+                        color: _color1,
+                      ),
+                      // Define how long the animation should take.
+                      duration: const Duration(seconds: 1),
+                      // Provide an optional curve to make the animation feel smoother.
+                      curve: Curves.fastOutSlowIn,
+
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.rocket_launch_outlined,
                               color: _iconColor,
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold),
+                              size: 70,
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              "Move faster, right from the start",
+                              style: TextStyle(
+                                  color: _iconColor,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              "Accelerate your ROI with expert implementation options for organizations of any size",
+                              style: TextStyle(color: _iconColor, fontSize: 16),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          "Accelerate your ROI with expert implementation options for organizations of any size",
-                          style: TextStyle(color: _iconColor, fontSize: 16),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
-                ),
-              ),
-              TextButton(
-                onHover: (val) {
-                  if (val) {
-                    setState(() {
-                      _width = 380;
-                      _height = 300;
-                      _color2 = Colors.black;
-                    });
-                  } else {
-                    setState(() {
-                      _color2 = AppColor.primary;
-                    });
-                  }
-                },
-                onPressed: () {},
-                child: AnimatedContainer(
-                  // Use the properties stored in the State class.
-                  width: 380,
-                  height: 280,
-                  decoration: BoxDecoration(
-                    color: _color2,
+                  SizedBox(
+                    height: 10,
                   ),
-                  // Define how long the animation should take.
-                  duration: const Duration(seconds: 1),
-                  // Provide an optional curve to make the animation feel smoother.
-                  curve: Curves.fastOutSlowIn,
+                  TextButton(
+                    onHover: (val) {
+                      if (val) {
+                        setState(() {
+                          _width = 380;
+                          _height = 300;
+                          _color2 = Colors.black;
+                        });
+                      } else {
+                        setState(() {
+                          _color2 = AppColor.primary;
+                        });
+                      }
+                    },
+                    onPressed: () {},
+                    child: AnimatedContainer(
+                      // Use the properties stored in the State class.
+                      width: 380,
+                      height: 280,
+                      decoration: BoxDecoration(
+                        color: _color2,
+                      ),
+                      // Define how long the animation should take.
+                      duration: const Duration(seconds: 1),
+                      // Provide an optional curve to make the animation feel smoother.
+                      curve: Curves.fastOutSlowIn,
 
-                  child: Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(
-                          Icons.album_outlined,
-                          color: _iconColor,
-                          size: 70,
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          "Save critical time, remove barriers",
-                          style: TextStyle(
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.album_outlined,
                               color: _iconColor,
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold),
+                              size: 70,
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              "Save critical time, remove barriers",
+                              style: TextStyle(
+                                  color: _iconColor,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              "Solve challenges with fleky tests, high failure rates, or Bugs with help of our experts.",
+                              style: TextStyle(color: _iconColor, fontSize: 16),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          "Solve challenges with fleky tests, high failure rates, or Bugs with help of our experts.",
-                          style: TextStyle(color: _iconColor, fontSize: 16),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
-                ),
-              ),
-              TextButton(
-                onHover: (val) {
-                  if (val) {
-                    setState(() {
-                      _width = 380;
-                      _height = 300;
-                      _color3 = Colors.black;
-                    });
-                  } else {
-                    setState(() {
-                      _color3 = AppColor.primary;
-                    });
-                  }
-                },
-                onPressed: () {},
-                child: AnimatedContainer(
-                  // Use the properties stored in the State class.
-                  width: 380,
-                  height: 280,
-                  decoration: BoxDecoration(
-                    color: _color3,
+                  SizedBox(
+                    height: 10,
                   ),
-                  // Define how long the animation should take.
-                  duration: const Duration(seconds: 1),
-                  // Provide an optional curve to make the animation feel smoother.
-                  curve: Curves.fastOutSlowIn,
+                  TextButton(
+                    onHover: (val) {
+                      if (val) {
+                        setState(() {
+                          _width = 380;
+                          _height = 300;
+                          _color3 = Colors.black;
+                        });
+                      } else {
+                        setState(() {
+                          _color3 = AppColor.primary;
+                        });
+                      }
+                    },
+                    onPressed: () {},
+                    child: AnimatedContainer(
+                      // Use the properties stored in the State class.
+                      width: 380,
+                      height: 280,
+                      decoration: BoxDecoration(
+                        color: _color3,
+                      ),
+                      // Define how long the animation should take.
+                      duration: const Duration(seconds: 1),
+                      // Provide an optional curve to make the animation feel smoother.
+                      curve: Curves.fastOutSlowIn,
 
-                  child: Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(
-                          Icons.stacked_line_chart_rounded,
-                          color: _iconColor,
-                          size: 70,
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          "Adopt best practices, accelerate automation",
-                          style: TextStyle(
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.stacked_line_chart_rounded,
                               color: _iconColor,
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold),
+                              size: 70,
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              "Adopt best practices, accelerate automation",
+                              style: TextStyle(
+                                  color: _iconColor,
+                                  fontSize: 22,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              "From framework development to scripts that accelerate automation, we can help.",
+                              style: TextStyle(color: _iconColor, fontSize: 16),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Text(
-                          "From framework development to scripts that accelerate automation, we can help.",
-                          style: TextStyle(color: _iconColor, fontSize: 16),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
-                ),
-              ),
-            ],
-          ),
+                ]),
         ],
       ),
     );
