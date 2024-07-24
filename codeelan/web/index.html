@@ -34,5 +34,39 @@
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
+
+
+  <!-- Ensure your flutter target is present on the page... -->
+  <div id="flutter_host">Loading...</div>
+
+  <script>
+    {{flutter_js}}
+    {{flutter_build_config}}
+
+    _flutter.loader.load({
+      config: {
+        hostElement: document.getElementById('flutter_host'),
+      }
+    });
+  </script>
+
+
+  <script>
+    {{flutter_js}}
+    {{flutter_build_config}}
+
+    // TODO: Replace this with your own code to determine which renderer to use.
+    const useHtml = true;
+
+    const config = {
+      renderer: useHtml ? "html" : "canvaskit",
+    };
+    _flutter.loader.load({
+      config: config,
+    });
+  </script>
+
+
+
 </body>
 </html>
